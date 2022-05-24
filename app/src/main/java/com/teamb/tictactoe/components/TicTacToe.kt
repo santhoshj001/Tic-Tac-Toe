@@ -20,7 +20,10 @@ fun TicTacToe(
     modifier: Modifier,
     onclick: (ClickAction) -> Unit
 ) {
-    Column(modifier = modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        modifier = modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         if (state.isFinished) {
             Text(
                 text = state.finishMessage,
@@ -46,7 +49,8 @@ fun TicTacToe(
 
             TileButton(symbol = state.values[0], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(0)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(0)) })
             Divider(
                 Modifier
                     .fillMaxHeight()
@@ -54,7 +58,8 @@ fun TicTacToe(
             )
             TileButton(symbol = state.values[1], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(1)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(1)) })
             Divider(
                 Modifier
                     .fillMaxHeight()
@@ -62,7 +67,8 @@ fun TicTacToe(
             )
             TileButton(symbol = state.values[2], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(2)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(2)) })
         }
         Divider()
         Row(
@@ -75,7 +81,8 @@ fun TicTacToe(
 
             TileButton(symbol = state.values[3], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(3)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(3)) })
             Divider(
                 Modifier
                     .fillMaxHeight()
@@ -83,7 +90,8 @@ fun TicTacToe(
             )
             TileButton(symbol = state.values[4], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(4)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(4)) })
             Divider(
                 Modifier
                     .fillMaxHeight()
@@ -91,7 +99,8 @@ fun TicTacToe(
             )
             TileButton(symbol = state.values[5], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(5)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(5)) })
 
         }
         Divider()
@@ -105,7 +114,8 @@ fun TicTacToe(
 
             TileButton(symbol = state.values[6], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(6)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(6)) })
 
             Divider(
                 Modifier
@@ -115,7 +125,8 @@ fun TicTacToe(
 
             TileButton(symbol = state.values[7], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(7)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(7)) })
             Divider(
                 Modifier
                     .fillMaxHeight()
@@ -123,12 +134,16 @@ fun TicTacToe(
             )
             TileButton(symbol = state.values[8], modifier = Modifier
                 .weight(1f)
-                .aspectRatio(1f), onClick = { onclick(ClickAction.TileClick(8)) })
+                .aspectRatio(1f),
+                onClick = { onclick(ClickAction.TileClick(8)) })
 
         }
         Divider()
 
-        Button(onClick = { onclick(ClickAction.GameReset) }, modifier = Modifier.padding(32.dp)) {
+        Button(
+            onClick = { onclick(ClickAction.GameReset) },
+            modifier = Modifier.padding(32.dp)
+        ) {
             Text(text = "Reset Game")
         }
     }
